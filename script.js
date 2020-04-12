@@ -13,11 +13,51 @@ $(document).ready(function(){
   <div class="tempF"></div> */
 
     // This is our API key
-    var APIKey = "25eae694827e9cccc433d37950486b7c";
+    var APIKey1 = "397e528f419d411919453c9941235a39";
+    // Here we are building the URL we need to query the database
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
+      "q=Denver&appid=" + APIKey1 + "&units=imperial";
+
+    // Here we run our AJAX call to the OpenWeatherMap API
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    })
+      // We store all of the retrieved data inside of an object called "response"
+      .then(function(response) {
+
+        // Log the queryURL
+        console.log(queryURL);
+
+        // Log the resulting object
+        console.log(response);
+
+        // Transfer content to HTML
+        $(".city").text("City: " + response.name);
+        // $(".wind").text("Wind Speed: " + response.wind.speed);
+        $(".humidity").text("Humidity: " + response.main.humidity);
+        $(".temp").text("Temperature: " + response.main.temp);
+        $(".icon").text("Icon: " + response.weather.icon);
+        // // Convert the temp to fahrenheit
+        // var tempF = (response.main.temp - 273.15) * 1.80 + 32;
+
+        // // add temp content to html
+        // $(".temp").text("Temperature (K) " + response.main.temp);
+        // $(".tempF").text("Temperature (F) " + tempF.toFixed(2));
+
+        // // Log the data in the console as well
+        // console.log("Wind Speed: " + response.wind.speed);
+        console.log("City: " + response.name);
+        console.log("Humidity: " + response.main.humidity);
+        console.log("Temperature: " + response.main.temp);
+        console.log("Icon: " + response.weather.icon)
+        // console.log("Temperature (F): " + tempF);
+      });
 
     // Here we are building the URL we need to query the database
+    var APIKey2 = "25eae694827e9cccc433d37950486b7c";
     var queryURL = "https://api.openweathermap.org/data/2.5/forecast?" +
-      "q=Denver&appid=" + APIKey + "&units=imperial";
+      "q=Denver&appid=" + APIKey2 + "&units=imperial";
 
     // Here we run our AJAX call to the OpenWeatherMap API
     $.ajax({
