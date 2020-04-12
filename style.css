@@ -1,12 +1,11 @@
-{
+* {
     box-sizing: border-box;
     padding: 100;
     margin: 20;
 }
 
-
 body {
-    background-image: url('../assets/dynamic-style.png');
+    background-image: url('../bootcampassign6/assets/dynamic-style.png');
     font-family: 'Baloo Chettan 2', 'Baloo 2', 'Poppins', cursive, sans-serif;
 }
 
@@ -20,21 +19,6 @@ body {
 .card-header{
   display: inline;
 }
-
-.slide{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.5s;
-  }
-
-  .active-slide{
-    opacity: 1;
-    z-index: 2;
-  }
 
   .quiz-container{
     position: relative;
