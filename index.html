@@ -32,16 +32,77 @@
   <!--Creating page grid  -->
   <header class="jumbotron">
     <h1>Weather Dashboard</h1>
-    <p class="lead">A simple dashboard app for finding the weather</p>
-    <p id="currentDay" class="lead"></p>
+    <!-- <p class="lead">A simple dashboard app for finding the weather</p>
+    <p id="currentDay" class="lead"></p> -->
     <form class="form-inline justify-content-center"></form>
   </header>
-  <div class="container" id = "dashboard">
+  <div class="container-fluid" id = "dashboard">
       <div class="row" id = "tr">
         <div class="col-sm-3">
             <h3>Search for a City:</h3>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button" id="button-addon2">
+                  <i class="far fa-save fa-1x"></i>
+                </button> 
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+              </ul>
+            </div>
         </div>
-        <div class="col-sm-9"></div>
+        
+        <div class="col-sm-9">
+          <div class="card" id="largeCard">
+            <div class="card-body">
+              This is some text within a card body.
+            </div>
+          </div>
+          <br><h3>Five Day Weather Forecast:</h3>
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card </p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text </p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting </p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below </p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below </p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
   </div>
   

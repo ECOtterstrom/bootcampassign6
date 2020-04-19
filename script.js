@@ -5,10 +5,10 @@ $(document).ready(function(){
   // weatherCol = $('<td>');
   // searchBox = $(`<textarea id=citySearch class = "input" rows="2" cols="20">`)
   
-    function currentDate() {
+    // function currentDate() {
       let date = moment().format("dddd, MMMM Do YYYY");
       $('#currentDay').append(date); 
-     }
+    //  }
     //currentDate();
 
     // First API key variable
@@ -34,13 +34,13 @@ $(document).ready(function(){
 
         // Transfer content to HTML
         $("<.city>").text("City: " + response.name);
-        $("<.date>").text("Date: " + currentDate());
+        $("<.date>").text("Date: " + date);
         $("<.temp>").text("Temperature: " + response.main.temp);
         $("<.humidity>").text("Humidity: " + response.main.humidity);
         $("<.windSpeed>").text("Wind Speed: " + response.wind.speed);
         $("<.icon>").text("Icon: " + response.weather.icon);
         tr.append("City: " + response.name,
-          "<br>", "Date: " + currentDate(), 
+          "<br>", "Date: " + date, 
           "<br>", "Temperature: " + response.main.temp, 
           "<br>", "Humidity: " + response.main.humidity,
           "<br>", "Wind Speed: " + response.wind.speed);
