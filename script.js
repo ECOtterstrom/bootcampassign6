@@ -56,7 +56,7 @@ function getCurrentWeather(cityInput){
    //URL to API
    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityInput + "&appid=" + APIKey1 + "&units=imperial";
   
-   // Creating an AJAX call for the specific movie button being clicked
+   // Creating an AJAX call
    $.ajax({
      url: queryURL,
      method: "GET"
@@ -85,7 +85,7 @@ function getUVIndex(lat, lon, title, temp, humid, wind){
       //URL to API
       var queryURL = `http://api.openweathermap.org/data/2.5/uvi?appid=${APIKey1}&lat=${lat}&lon=${lon}`;
      
-      // Creating an AJAX call for the specific movie button being clicked
+      // Creating an AJAX call
       $.ajax({
         url: queryURL,
         method: "GET"
@@ -118,7 +118,7 @@ function getForecast(cityInput){
       //URL to API
       var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInput + "&appid=" + APIKey1 + "&units=imperial";
      
-      // Creating an AJAX call for the specific movie button being clicked
+      // Creating an AJAX call 
       $.ajax({
         url: queryURL,
         method: "GET"
