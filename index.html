@@ -41,67 +41,34 @@
         <div class="col-sm-3">
             <h3>Search for a City:</h3>
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <input type="text" class="form-control" id="cityInput">
               <div class="input-group-append">
-                <button class="btn btn-primary" type="button" id="button-addon2">
-                  <i class="far fa-save fa-1x"></i>
+                <button class="btn btn-primary" type="button"  id="searchBtn">
+                  <i class="fas fa-search fa-1x"></i>
                 </button> 
               </div>
             </div>
-            <div class="card" style="width: 18rem;">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+            <div class="card" id="cardsList">  
+              <ul class="list-group list-group-flush" id="history">
+
               </ul>
             </div>
         </div>
         
         <div class="col-sm-9">
-          <div class="card" id="largeCard">
-            <div class="card-body">
-              This is some text within a card body.
-            </div>
-          </div>
-          <br><h3>Five Day Weather Forecast:</h3>
-          <div class="card-deck">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card </p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text </p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting </p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below </p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below </p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
+          <div class="row">
+            <div class="card col-12" id="largeCard">
+                        <div class="card-body" id="currentWeather">
+                        
+                        </div>
+             </div>
+                    
+            <div class="card-deck col-12" id="forecast">
+                
 
+             </div>
           </div>
+          
         </div>
       </div>
   </div>
