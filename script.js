@@ -4,7 +4,8 @@
  var cityList = JSON.parse(window.localStorage.getItem("cityList")) || [];
 $(document).ready(function(){
   
-      let date = moment().format("dddd, MMMM Do YYYY");
+      //let date = moment().format("dddd, MMMM Do YYYY");
+      let date = moment().format("l");
       $('#currentDay').append(date); 
 
       loadHistoryList(cityList);
@@ -47,7 +48,7 @@ function addCityToLocaltorage(cityInput){
 
 function createHistoryLi(cityInput){
       var li = $("<li>").addClass("list-group-item list-group-item-action").text(cityInput);
-      $("#history").append(li);
+      $("#history").prepend(li);
 }
 
 
