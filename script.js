@@ -69,7 +69,7 @@ function getCurrentWeather(cityInput){
          var humid = $("<p>").addClass("card-text").text("Humidity: " + data.main.humidity + "%");
          var temp = $("<p>").addClass("card-text").text("Temperature: " + data.main.temp + " °F");
 
-         var img = $("<img>").attr("src", "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
+         var img = $("<img>").attr("src", "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
     
          title.append(img);
         
@@ -83,7 +83,7 @@ function getCurrentWeather(cityInput){
 
 function getUVIndex(lat, lon, title, temp, humid, wind){
       //URL to API
-      var queryURL = `http://api.openweathermap.org/data/2.5/uvi?appid=${APIKey1}&lat=${lat}&lon=${lon}`;
+      var queryURL = `https://api.openweathermap.org/data/2.5/uvi?appid=${APIKey1}&lat=${lat}&lon=${lon}`;
      
       // Creating an AJAX call
       $.ajax({
@@ -132,7 +132,7 @@ function getForecast(cityInput){
                    var card = $("<div>").addClass("card bg-primary text-white");
                    var body = $("<div>").addClass("card-body");
                    var title = $("<h5>").addClass("card-title").text(new Date(data.list[i].dt_txt).toLocaleDateString());
-                   var img = $("<img>").attr("src", "http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png");
+                   var img = $("<img>").attr("src", "https://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png");
                    var p1 = $("<p>").addClass("card-text").text("Temp: " + data.list[i].main.temp_max + " °F");
                    var p2 = $("<p>").addClass("card-text").text("Humidity: " + data.list[i].main.humidity + "%");
                    col.append(card.append(body.append(title, img, p1, p2)));
