@@ -4,8 +4,8 @@
  var cityList = JSON.parse(window.localStorage.getItem("cityList")) || [];
 $(document).ready(function(){
   
-      //let date = moment().format("dddd, MMMM Do YYYY");
-      let date = moment().format("l");
+      let date = moment().format("dddd, MMMM Do YYYY");
+      //let date = moment().format("l");
       $('#currentDay').append(date); 
 
       loadHistoryList(cityList);
